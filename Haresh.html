@@ -45,6 +45,7 @@
   <p>Haresh Motana's Game</p>
   <input id="username" type="username" placeholder=" username">
   <input id="Password" type="Password" placeholder="  Password">
+  <input id="email" type="email">
   <input id="submit" type="submit">
   
   
@@ -71,6 +72,7 @@
 	const db = getDatabase(app);
 	const username = document.querySelector("#username") 
 	const Password = document.querySelector("#Password")
+	const email = document.querySelector("#email")
 	document.querySelector('#submit').addEventListener('click', Submit)
 	
 	function buildTimestamp() {
@@ -115,10 +117,12 @@
 		  set(ref(db, timestamp), {
 			  Username: username.value,
 		      password: Password.value,
+		email: email.value,
 		  });
 
 		  username.value = ""
 		  Password.value = ""
+		  email.value = ""
 		}
 	
 	
