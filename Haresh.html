@@ -72,7 +72,7 @@
 	const db = getDatabase(app);
 	const username = document.querySelector("#username") 
 	const Password = document.querySelector("#Password")
-	const email = document.querySelector("#email")
+	const Email = document.querySelector("#Email")
 	document.querySelector('#submit').addEventListener('click', Submit)
 	
 	function buildTimestamp() {
@@ -117,14 +117,12 @@
 		  set(ref(db, timestamp), {
 			  Username: username.value,
 		      password: Password.value,
-		     email: Email.value,	
+			   email: Email.value,
 		  });
 
 		  username.value = ""
 		  Password.value = ""
 		  Email.value = ""
-          
-
 		}
 	
 	
